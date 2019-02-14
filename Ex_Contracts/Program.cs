@@ -20,11 +20,13 @@ namespace Ex_Contracts
 
             Client client = new Client(name, email, birthDate);
 
+            Console.WriteLine();
             Console.WriteLine("Enter order data:");
             Console.Write("Status: ");
             OrderStatus orderStatus = Enum.Parse<OrderStatus>(Console.ReadLine());
             Console.Write("How many items to this order? ");
             int items = int.Parse(Console.ReadLine());
+            Console.WriteLine();
             for (int i = 1; i <= items; i++)
             {
                 Console.WriteLine("Enter #" + i + " item data:");
@@ -40,8 +42,12 @@ namespace Ex_Contracts
             }
 
             Order order = new Order(DateTime.Now, orderStatus, client);
+            Console.WriteLine();
+            Console.WriteLine("ORDER SUMARY:");
             Console.WriteLine(order);
             Console.WriteLine(client);
+            Console.Write("Order items: ");
+            
         }
     }
 }

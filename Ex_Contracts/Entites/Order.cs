@@ -37,8 +37,10 @@ namespace Ex_Contracts.Entites
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("Order moment: " + DateTime.Now);
-            sb.Append("Order status: " + Status);            
+            sb.AppendLine("Order moment: " + DateTime.Now);
+            sb.Append("Order status: " + Status);
+
+            return sb.ToString();
         }
 
     }

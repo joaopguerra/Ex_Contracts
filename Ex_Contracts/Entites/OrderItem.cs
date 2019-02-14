@@ -26,5 +26,15 @@ namespace Ex_Contracts.Entites
         {
             return Price * Quantity;
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Item + ", ");
+            sb.Append(Price + ", ");
+            sb.Append("Quantity: " + Quantity + ", ");
+            sb.Append("Subtotal: $" + subTotal());
+
+        }
     }
 }
