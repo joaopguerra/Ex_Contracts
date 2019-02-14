@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Ex_Contracts.Entites.Enums
 {
-    class OrderStatus
+    enum OrderStatus : int
     {
+        Pending_Payment = 0,
+        Processing = 1,
+        Shipped = 2,
+        Delivered = 3
     }
 }

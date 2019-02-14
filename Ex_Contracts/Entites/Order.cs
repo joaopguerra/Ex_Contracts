@@ -33,6 +33,13 @@ namespace Ex_Contracts.Entites
         {
             Items.Remove(item);
         }
-        
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Order moment: " + DateTime.Now);
+            sb.Append("Order status: " + Status);            
+        }
+
     }
 }
